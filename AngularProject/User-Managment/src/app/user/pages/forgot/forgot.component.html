@@ -1,0 +1,37 @@
+<div id="container" class="bg-image" style=" background-image: url('../../../assets/img/13-CG155406.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;background-color: rgba(255,255,255,0.13);
+ backdrop-filter: blur(10px)">
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-white shadow-lg bg-light text-black" style="border-spacing: 5rem;">
+            <div class="card-body p-5 ">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <h2 class="fw-bold mb-3  text-center">Forgot Password</h2>
+               <p></p>
+                 
+                    
+                    <form [formGroup]="forgot" (ngSubmit)="submitforgot()">
+                     
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="Emailaddress">Email address</label>
+                       <input type="email" [(ngModel)]="email" class="form-control " formControlName="email">
+                       <small *ngIf="forgot.get('email').invalid && forgot.get('email').touched" class="text-danger">Please enter a valid email</small>
+                        </div>
+                       
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                      <button type="submit" class="btn btn-primary  text-center ">Submit</button>
+                      </div>
+                    </form>
+              </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

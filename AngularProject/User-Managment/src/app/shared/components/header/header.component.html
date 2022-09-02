@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    
+  <div class="container">
+  
+    <a class="navbar-brand me-2" [routerLink]="['/dashboard']">
+      
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarButtonsExample"
+      aria-controls="navbarButtonsExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/dashboard']"><h4>Career Infotech</h4></a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center">
+        <button type="button" class="btn btn-secondary px-3 me-2" [routerLink]="['/login']">
+          Login
+        </button>
+        <button type="button" class="btn btn-secondary me-3" [routerLink]="['/registration']">
+          Registration
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</nav>

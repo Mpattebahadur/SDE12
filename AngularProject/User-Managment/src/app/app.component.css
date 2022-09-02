@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+
+    position: relative;
+    min-height: 100vh
+}
+#footer{
+    position: absolute;
+    height: 0px;
+    width: 100%;
+}

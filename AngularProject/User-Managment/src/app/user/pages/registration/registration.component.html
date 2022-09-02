@@ -1,0 +1,83 @@
+<div id="container" class="bg-image" style=" background-image: url('../../../assets/img/th (1).jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;background-color: rgba(255,255,255,0.13);
+ backdrop-filter: blur(10px)">
+
+<div class="vh-150 ">
+    <div class="container py-3 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card  shadow-lg  text-black" style="border-spacing: 5rem; background-color: #02021c56;">
+            <div class="card-body p-1 ">
+  
+              <div class="mb-md-2 mt-md-1 pb-2 ">
+  
+                <h2 class="fw-bold mb-2  text-center">Registration</h2>
+               <p>{{resData}}</p>
+                 
+                    
+               <form [formGroup]="registration" (ngSubmit)="regdata()" class="row g-3" >
+                <div class="col-12-md text-white">
+                 FirstName    <input type="text" class="form-control " name="fname" formControlName="fname">
+                 
+                </div>
+
+                  <div class="col-12-md text-white">
+                 LastName   <input type="text" class="form-control " name="lname" formControlName="lname">
+                 
+                  </div>
+           
+              <div class="col-12-md text-white">
+             Email   <input type="text" class="form-control " name="email" formControlName="email" (blur)=" getCheckEmail($event.target.value)"  >
+             <small *ngIf="registration.get('email').invalid && registration.get('email').touched" class="text-danger">Please enter a valid email</small>  
+              </div>
+
+              <div class="col-12-md text-white">
+             Phno   <input type="number" class="form-control " name="phno" formControlName="phno">
+              </div>
+
+              <div class="col-12-md text-white">
+             Dob   <input type="date" class="form-control " name="dob" formControlName="dob"   >
+              </div>
+
+              <div class="col-md-12 text-white ">
+                gender  <input type="radio" value="Male" name="gender" formControlName="gender">Male
+                      <input type="radio" value="Female" name="gender" formControlName="gender">Female
+              </div>
+
+              <div class="col-md-12 text-white">
+                countryId  <select (change)="getStatesBy($event.target.value)" class="form-select" formControlName="countryId">
+                <option *ngFor="let c of countries |keyvalue" [value]="c.key">{{c.value}}</option>
+               
+              </select>
+              </div>
+
+              <div class="col-md-12 text-white">
+             stateId    <select (change)="getCitiesBy($event.target.value)" class="form-select" formControlName="stateId">
+                <option *ngFor="let s of states |keyvalue" [value]="s.key">{{s.value}}</option>
+                
+             </select>
+
+             <div class="col-md-12 text-white">
+              cityId    <select   class="form-select" formControlName="cityId">
+                <option *ngFor="let c of cities |keyvalue" [value]="c.key">{{c.value}}</option>
+                
+             </select>
+             </div>
+           </div>
+
+             <div class="col-md-12 ">
+              <button class="btn btn-primary" type="reset" >reset</button>
+                <button class="btn btn-primary" type="submit" >Submit</button>
+              </div>
+            
+              
+            
+
+         </form>
+              </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>

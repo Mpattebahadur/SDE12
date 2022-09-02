@@ -1,0 +1,58 @@
+<div id="container" class="bg-image" style=" background-image: url('../../../assets/img/13-CG155406.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;background-color: rgba(255,255,255,0.13);
+ backdrop-filter: blur(10px)">
+
+
+<div class="vh-100 ">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card  shadow-lg  text-black" style="border-spacing: 2rem; background-color: #02021c56;">
+            <div class="card-body p-5 ">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <h2 class="fw-bold mb-2  text-center">Unlock Account</h2>
+                <p class="text-white-50 mb-3"></p>
+                  <form [formGroup]="unlock" (ngSubmit)="unlockData()">
+                    
+                    <div class="form-outline md-4 text-white">
+                        <label class="form-label" for="form1Example13">Email address</label>
+                       <input type="text" class="form-control " name="email" formControlName="email"   >
+                      </div>
+    
+                      <div class="form-outline md-4 text-white">
+                        <label class="form-label" for="form1Example13">tempPwd</label>
+                        <input type="password" class="form-control " name="tempPwd" formControlName="tempPwd">
+                      </div>
+    
+                      <div class="form-outline md-4 text-white ">
+                        <label class="form-label" for="form1Example13">newPwd</label>
+                        <input type="password" class="form-control " name="newPwd" formControlName="newPwd">
+                      </div>
+    
+                         <div class="form-outline md-4 text-white">
+                            <label class="form-label" for="form1Example13">confirmPwd</label>
+                              <input type="password" class="form-control " name="confirmPwd" formControlName="confirmPwd">
+                         </div>
+    
+                             <p></p>
+    
+                             <div class="d-grid gap-2 col-6 mx-auto">
+                              <button type="submit" class="btn btn-primary  text-center ">Submit</button>
+                              </div>
+    
+                  
+              </form>
+        
+                
+              </div>
+  
+              
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
